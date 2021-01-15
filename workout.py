@@ -10,18 +10,17 @@ count=0
 for data in jsondata:
     meterval=data['HeightCm']/100.0
     bmi_value=data['WeightKg']/meterval
-    print(bmi_value)
     if int(bmi_value)<=int(18.4):
-        print("Underweight")
+        print("Underweight with bmi value as {} ".format(bmi_value))
     elif int(bmi_value)>=int(18.5) and int(bmi_value)<=int(24.9):
-        print("Normalweight")
+        print("Normalweight with bmi value as {} ".format(bmi_value))
     elif int(bmi_value)>=int(25) and int(bmi_value)<=int(29.9):
         count+=1
-        print("Overweight")
+        print("Overweight with bmi value as {} ".format(bmi_value))
     elif int(bmi_value)>=int(30) and int(bmi_value)<=int(34.9):
-        print("Moderately obese")
+        print("Moderately obese with bmi value as {} ".format(bmi_value))
     elif int(bmi_value)>=int(35) and int(bmi_value)<=int(39.9):
-        print("Severely obese")
+        print("Severely obese with bmi value as {} ".format(bmi_value))
     elif int(bmi_value)>=int(40):
-        print("Very severely obese")
+        print("Very severely obese with bmi value as {} ".format(bmi_value))
 print("{} people are available in the range of overweight category".format(count))
